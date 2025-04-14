@@ -326,7 +326,6 @@ bool CGameProcLogIn::MsgSend_AccountLogIn(e_LogInClassification eLIC) {
     return true;
 }
 
-
 bool CGameProcLogIn::MsgSend_NewsRequestData() {
     BYTE byBuffer[4];
     int  iOffset = 0;
@@ -337,7 +336,6 @@ bool CGameProcLogIn::MsgSend_NewsRequestData() {
 
     return true;
 }
-
 
 void CGameProcLogIn::MsgRecv_GameServerGroupList(DataPack * pDataPack, int & iOffset) {
     int iServerCount = CAPISocket::Parse_GetByte(pDataPack->m_pData, iOffset); // 서버 갯수

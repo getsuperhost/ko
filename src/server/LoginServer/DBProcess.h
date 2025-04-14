@@ -19,7 +19,6 @@ class CDBProcess {
     BOOL LoadUserCountList();
     BOOL LoadNews();
 
-
     CDBProcess();
     virtual ~CDBProcess();
 

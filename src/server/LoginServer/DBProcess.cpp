@@ -341,8 +341,8 @@ BOOL CDBProcess::LoadNews() {
     while (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
         retcode = SQLFetch(hstmt);
         if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
-            SQLCHAR titleBuffer[256] = {0};  
-            SQLCHAR contentBuffer[4096] = {0}; 
+            SQLCHAR titleBuffer[256] = {0};
+            SQLCHAR contentBuffer[4096] = {0};
 
             SQLGetData(hstmt, 1, SQL_C_CHAR, titleBuffer, sizeof(titleBuffer), NULL);
             SQLGetData(hstmt, 2, SQL_C_CHAR, contentBuffer, sizeof(contentBuffer), NULL);

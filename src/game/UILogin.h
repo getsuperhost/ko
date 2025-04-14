@@ -57,10 +57,9 @@ class CUILogIn : public CN3UIBase {
     bool  m_bLogIn; // 로그인 중복 방지..
 
   public:
-    std::string m_loginNewsTitle[3]; 
-    std::string m_loginNewsText[3];  
-    int  m_loginNewsCount = 0;
-
+    std::string m_loginNewsTitle[3];
+    std::string m_loginNewsText[3];
+    int         m_loginNewsCount = 0;
 
     void SetRequestedLogIn(bool bLogIn) { m_bLogIn = bLogIn; }
     bool OnKeyPress(int iKey);

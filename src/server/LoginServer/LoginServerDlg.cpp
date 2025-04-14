@@ -266,7 +266,7 @@ void CLoginServerDlg::RefreshNewsData() {
 
 void CLoginServerDlg::OnTimer(UINT_PTR nIDEvent) {
     if (nIDEvent == m_NewsRefreshTimerID) {
-        RefreshNewsData(); 
+        RefreshNewsData();
     }
     CDialog::OnTimer(nIDEvent);
 }

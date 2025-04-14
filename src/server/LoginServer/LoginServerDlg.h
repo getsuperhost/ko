@@ -40,13 +40,12 @@ class CLoginServerDlg : public CDialog {
     char m_ODBCPwd[32];
     char m_TableName[32];
 
-    VersionInfoList m_VersionList;
-    ServerInfoList  m_ServerList;
-    int             m_nServerCount;
+    VersionInfoList    m_VersionList;
+    ServerInfoList     m_ServerList;
+    int                m_nServerCount;
     std::vector<_NEWS> m_ServerNews;
     int                m_NewsRefreshInterval = 30; // Minutes
-    UINT_PTR           m_NewsRefreshTimerID = 0;   
-
+    UINT_PTR           m_NewsRefreshTimerID = 0;
 
     CDBProcess m_DBProcess;
 
