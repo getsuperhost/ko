@@ -348,8 +348,8 @@ BOOL CDBProcess::LoadNews() {
             SQLGetData(hstmt, 2, SQL_C_CHAR, contentBuffer, sizeof(contentBuffer), NULL);
             SQLGetData(hstmt, 3, SQL_C_BIT, &newsItem.IsActive, 0, NULL);
 
-            titleBuffer[sizeof(titleBuffer) - 1] = '\0';
-            contentBuffer[sizeof(contentBuffer) - 1] = '\0';
+            titleBuffer[sizeof(titleBuffer) - 1];
+            contentBuffer[sizeof(contentBuffer) - 1];
 
             strncpy(newsItem.Title, reinterpret_cast<char *>(titleBuffer), sizeof(newsItem.Title) - 1);
             strncpy(newsItem.Content, reinterpret_cast<char *>(contentBuffer), sizeof(newsItem.Content) - 1);

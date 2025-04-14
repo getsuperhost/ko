@@ -72,9 +72,9 @@ void CUser::Parsing(int len, char * pData) {
         MgameLogin(pData + index);
         break;
     case LS_NEWS: {
-        constexpr char BOX_START[] = {'#', '\0', '\n'};
-        constexpr char LINE_ENDING[] = {'\0', '\n'};
-        constexpr char BOX_END[] = {'#', '\0', '\n', '\0', '\n'};
+        constexpr char BOX_START[] = {'#', '\0'};
+        constexpr char LINE_ENDING[] = {'\0'};
+        constexpr char BOX_END[] = {'#', '\0'};
 
         std::ostringstream oss;
 
