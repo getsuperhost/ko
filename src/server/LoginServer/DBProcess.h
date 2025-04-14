@@ -17,6 +17,8 @@ class CDBProcess {
     int  AccountLogin(const char * szId, const char * szPwd);
     BOOL LoadVersionList();
     BOOL LoadUserCountList();
+    BOOL LoadNews();
+
 
     CDBProcess();
     virtual ~CDBProcess();
