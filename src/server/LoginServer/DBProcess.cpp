@@ -315,7 +315,8 @@ BOOL CDBProcess::LoadNews() {
     memset(szSQL, 0x00, 1024);
     wsprintf(szSQL, TEXT("SELECT Title, Content, IsActive FROM NEWS WHERE IsActive = 1 AND "
                          "(StartsAt IS NULL OR StartsAt <= GETDATE()) AND "
-                         "(ExpiresAt IS NULL OR ExpiresAt > GETDATE())"));
+                         "(ExpiresAt IS NULL OR ExpiresAt > GETDATE()) AND "
+                         "NoticeType = 'login'"));
 
     _NEWS newsItem;
     memset(&newsItem, 0, sizeof(newsItem));
@@ -347,9 +348,6 @@ BOOL CDBProcess::LoadNews() {
             SQLGetData(hstmt, 1, SQL_C_CHAR, titleBuffer, sizeof(titleBuffer), NULL);
             SQLGetData(hstmt, 2, SQL_C_CHAR, contentBuffer, sizeof(contentBuffer), NULL);
             SQLGetData(hstmt, 3, SQL_C_BIT, &newsItem.IsActive, 0, NULL);
-
-            titleBuffer[sizeof(titleBuffer) - 1];
-            contentBuffer[sizeof(contentBuffer) - 1];
 
             strncpy(newsItem.Title, reinterpret_cast<char *>(titleBuffer), sizeof(newsItem.Title) - 1);
             strncpy(newsItem.Content, reinterpret_cast<char *>(contentBuffer), sizeof(newsItem.Content) - 1);
